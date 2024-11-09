@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "description": "你的情绪是否时起时落?",
+        "value": 1
+    },
+    {
+        "id": 2,
+        "description": "当你看到小孩（或动物）受折磨时是否感到难受?",
+        "value": 1
+    },
+    {
+        "id": 3,
+        "description": "你是个健谈的人吗?",
+        "value": 2
+    },
+    {
+        "id": 4,
+        "description": "如果你说了要做什么事，是否不论此事顺不顺利你都总能遵守诺言?",
+        "value": 2
+    },
+    {
+        "id": 5,
+        "description": "你是否会无言无故地感到“很惨”?",
+        "value": 1
+    },
+    {
+        "id": 6,
+        "description": "欠债会使你感到忧虑吗?",
+        "value": 1
+    },
+    {
+        "id": 7,
+        "description": "你是个生气勃勃的人吗?",
+        "value": 2
+    },
+    {
+        "id": 8,
+        "description": "你是否曾贪图过超过你应得的分外之物?",
+        "value": 2
+    },
+    {
+        "id": 9,
+        "description": "你是个容易被激怒的人吗?",
+        "value": 2
+    },
+    {
+        "id": 10,
+        "description": "你会服用能产生奇异或危险效果的药物吗?",
+        "value": 2
+    },
+    {
+        "id": 11,
+        "description": "你愿意认识陌生人吗?",
+        "value": 1
+    },
+    {
+        "id": 12,
+        "description": "你是否曾经有过明知自己做错了事却责备别人的情况",
+        "value": 2
+    },
+    {
+        "id": 13,
+        "description": "你的感情容易受伤害吗?",
+        "value": 1
+    },
+    {
+        "id": 14,
+        "description": "你是否愿意按照自己的方式行事，而不愿意按照规则办事",
+        "value": 2
+    },
+    {
+        "id": 15,
+        "description": "在热闹的聚会中你能使自己放得开，使自己玩得开心吗",
+        "value": 1
+    },
+    {
+        "id": 16,
+        "description": "你所有的习惯是否都是好的",
+        "value": 2
+    },
+    {
+        "id": 17,
+        "description": "你是否时常感到“极其厌倦”?",
+        "value": 1
+    },
+    {
+        "id": 18,
+        "description": "良好的举止和整洁对你来说很重要吗?",
+        "value": 1
+    },
+    {
+        "id": 19,
+        "description": "在结交新朋友时，你经常是积极主动的吗?",
+        "value": 1
+    },
+    {
+        "id": 20,
+        "description": "你是否有过随口骂人的时候?",
+        "value": 2
+    },
+    {
+        "id": 21,
+        "description": "你认为自己是一个胆怯不安的人吗?",
+        "value": 1
+    },
+    {
+        "id": 22,
+        "description": "你是否认为婚姻是不合时宜的，应该废除",
+        "value": 2
+    },
+    {
+        "id": 23,
+        "description": "你能否很容易地给一个沉闷的聚会注入活力",
+        "value": 1
+    },
+    {
+        "id": 24,
+        "description": "你曾毁坏或丢失过别人的东西吗",
+        "value": 2
+    },
+    {
+        "id": 25,
+        "description": "你是个忧心忡忡的人吗",
+        "value": 1
+    },
+    {
+        "id": 26,
+        "description": "你爱和别人合作吗",
+        "value": 1
+    },
+    {
+        "id": 27,
+        "description": "在社交场合你是否倾向于呆在不显眼的地方",
+        "value": 2
+    },
+    {
+        "id": 28,
+        "description": "如果在你的工作中出现了错误，你知道后会感到忧虑吗",
+        "value": 1
+    },
+    {
+        "id": 29,
+        "description": "你讲过别人的坏话或脏话吗",
+        "value": 2
+    },
+    {
+        "id": 30,
+        "description": "你认为自己是个神经紧张或“弦绷得过紧”的人吗",
+        "value": 1
+    },
+    {
+        "id": 31,
+        "description": "你是否觉得人们为了未来有保障，而在储蓄和保险方面花费的时间太多了",
+        "value": 2
+    },
+    {
+        "id": 32,
+        "description": "你是否喜欢和人们相处在一起",
+        "value": 1
+    },
+    {
+        "id": 33,
+        "description": "当你还是个小孩子的时候，你是否曾有过对父母耍赖或不听话的行为",
+        "value": 2
+    },
+    {
+        "id": 34,
+        "description": "在经历了一次令人难堪的事之后，你是否会为此烦恼很长时间",
+        "value": 1
+    },
+    {
+        "id": 35,
+        "description": "你是否努力使自己对人不粗鲁",
+        "value": 1
+    },
+    {
+        "id": 36,
+        "description": "你是否喜欢在自己周围有许多热闹和令人兴奋的事情",
+        "value": 1
+    },
+    {
+        "id": 37,
+        "description": "你曾在玩游戏时作过弊吗",
+        "value": 2
+    },
+    {
+        "id": 38,
+        "description": "你是否因自己的“神经过敏”而感到痛苦",
+        "value": 1
+    },
+    {
+        "id": 39,
+        "description": "你愿意别人怕你吗",
+        "value": 2
+    },
+    {
+        "id": 40,
+        "description": "你曾利用过别人吗",
+        "value": 2
+    },
+    {
+        "id": 41,
+        "description": "你是否喜欢说笑话和谈论有趣的事",
+        "value": 1
+    },
+    {
+        "id": 42,
+        "description": "你是否时常感到孤独",
+        "value": 1
+    },
+    {
+        "id": 43,
+        "description": "你是否认为遵循社会规范比按照个人方式行事更好一些",
+        "value": 2
+    },
+    {
+        "id": 44,
+        "description": "在别人眼里你总是充满活力的吗",
+        "value": 2
+    },
+    {
+        "id": 45,
+        "description": "你总能做到言行一致吗",
+        "value": 2
+    },
+    {
+        "id": 46,
+        "description": "你是否时常被负疚感所困扰",
+        "value": 2
+    },
+    {
+        "id": 47,
+        "description": "你有时将今天该做的事情拖到明天去做吗",
+        "value": 2
+    },
+    {
+        "id": 48,
+        "description": "你能使一个聚会顺利进行下去吗",
+        "value": 1
+    }
+]

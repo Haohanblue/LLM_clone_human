@@ -1,0 +1,217 @@
+[
+    {
+        "id": 1,
+        "description": "1.我常担心有什么不好的事情要发生",
+        "value": 5
+    },
+    {
+        "id": 2,
+        "description": "2.我常感到害怕",
+        "value": 4
+    },
+    {
+        "id": 3,
+        "description": "3.有时我觉得自己一无是处",
+        "value": 4
+    },
+    {
+        "id": 4,
+        "description": "4.我很少感到忧郁或沮丧",
+        "value": 3
+    },
+    {
+        "id": 5,
+        "description": "5.别人一句漫不经心的话，我常会联系在自己身上",
+        "value": 4
+    },
+    {
+        "id": 6,
+        "description": "6.在面对压力时，我有种快要崩溃的感觉",
+        "value": 3
+    },
+    {
+        "id": 7,
+        "description": "7.我常担忧一些无关紧要的事情",
+        "value": 4
+    },
+    {
+        "id": 8,
+        "description": "8.我常常感到内心不踏实",
+        "value": 4
+    },
+    {
+        "id": 9,
+        "description": "9.在工作上，我常只求能应付过去便可",
+        "value": 3
+    },
+    {
+        "id": 10,
+        "description": "10.一旦确定了目标，我会坚持努力地实现它",
+        "value": 3
+    },
+    {
+        "id": 11,
+        "description": "11.我常常是仔细考虑之后才做出决定",
+        "value": 3
+    },
+    {
+        "id": 12,
+        "description": "12.别人认为我是个慎重的人",
+        "value": 5
+    },
+    {
+        "id": 13,
+        "description": "13.做事讲究逻辑和条理是我的一个特点",
+        "value": 3
+    },
+    {
+        "id": 14,
+        "description": "14.我喜欢一开头就把事情计划好",
+        "value": 3
+    },
+    {
+        "id": 15,
+        "description": "15.我工作或学习很勤奋",
+        "value": 5
+    },
+    {
+        "id": 16,
+        "description": "16.我是个倾尽全力做事的人",
+        "value": 4
+    },
+    {
+        "id": 17,
+        "description": "17.尽管人类社会存在着一些阴暗的东西（如战争、罪恶、欺诈)，我仍然相信人性总的来说是善良的。",
+        "value": 6
+    },
+    {
+        "id": 18,
+        "description": "18.我觉得大部分人基本上是心怀善意的",
+        "value": 3
+    },
+    {
+        "id": 19,
+        "description": "19.虽然社会上有些骗子，但我觉得大部分人还是可信的",
+        "value": 3
+    },
+    {
+        "id": 20,
+        "description": "20.我不太关心别人是否受到不公正的待遇",
+        "value": 1
+    },
+    {
+        "id": 21,
+        "description": "21.我时常觉得别人的痛苦与我无关",
+        "value": 1
+    },
+    {
+        "id": 22,
+        "description": "22.我常为那些遭遇不幸的人感到难过",
+        "value": 6
+    },
+    {
+        "id": 23,
+        "description": "23.我是那种只照顾好自己，不替别人担忧的人",
+        "value": 1
+    },
+    {
+        "id": 24,
+        "description": "24.当别人向我诉说不幸时，我常感到难过",
+        "value": 4
+    },
+    {
+        "id": 25,
+        "description": "25.我的想象力相当丰富",
+        "value": 6
+    },
+    {
+        "id": 26,
+        "description": "26.我头脑中经常充满生动的画面",
+        "value": 6
+    },
+    {
+        "id": 27,
+        "description": "27.我对许多事情有着很强的好奇心",
+        "value": 6
+    },
+    {
+        "id": 28,
+        "description": "28.我喜欢冒险",
+        "value": 6
+    },
+    {
+        "id": 29,
+        "description": "29.我是个勇于冒险，突破常规的人",
+        "value": 5
+    },
+    {
+        "id": 30,
+        "description": "30.我身上具有别人没有的冒险精神",
+        "value": 3
+    },
+    {
+        "id": 31,
+        "description": "31.我渴望学习一些新东西，即使它们与我的日常生活无关",
+        "value": 6
+    },
+    {
+        "id": 32,
+        "description": "32.我很愿意也很容易接受那些新事物、新观点、新想法",
+        "value": 6
+    },
+    {
+        "id": 33,
+        "description": "33.我喜欢参加社交与娱乐聚会",
+        "value": 6
+    },
+    {
+        "id": 34,
+        "description": "34.我对人多的聚会感到乏味",
+        "value": 1
+    },
+    {
+        "id": 35,
+        "description": "35.我尽量避免参加人多的聚会和嘈杂的环境",
+        "value": 1
+    },
+    {
+        "id": 36,
+        "description": "36.在热闹的聚会上，我常常表现主动并尽情玩耍",
+        "value": 4
+    },
+    {
+        "id": 37,
+        "description": "37.有我在的场合一般不会冷场",
+        "value": 5
+    },
+    {
+        "id": 38,
+        "description": "38.我希望成为领导者而不是被领导者",
+        "value": 4
+    },
+    {
+        "id": 39,
+        "description": "39.在一个团体中，我希望处于领导地位",
+        "value": 4
+    },
+    {
+        "id": 40,
+        "description": "40.别人多认为我是一个热情和友好的人",
+        "value": 6
+    },
+    {
+        "id": 41,
+        "description": "联系方式（手机号）",
+        "value": 18130498995
+    },
+    {
+        "id": 42,
+        "description": "年龄",
+        "value": 18
+    },
+    {
+        "id": 43,
+        "description": "性别",
+        "value": 1
+    }
+]
