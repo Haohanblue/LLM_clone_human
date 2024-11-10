@@ -9,6 +9,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 from openpyxl.formatting.rule import CellIsRule
 from openpyxl.utils import get_column_letter
+import os
 pwd = os.path.dirname(os.path.realpath(__file__))
 # 假设模型名称列表
 model_names = list(model_predictions.keys())

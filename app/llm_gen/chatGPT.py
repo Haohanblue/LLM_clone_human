@@ -5,10 +5,11 @@ from openai import OpenAI
 # 加载 .env 文件
 load_dotenv(verbose=True)
 client = OpenAI(
-    # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI_API_KEY"),
+# This is the default and can be omitted
+api_key=os.environ.get("OPENAI_API_KEY"),
 )
 def get_GPT_response(message,model):
+  
     response = client.chat.completions.create(
         model=model,  # 填写需要调用的模型名称
         messages=[

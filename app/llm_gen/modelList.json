@@ -1,0 +1,86 @@
+[{
+    "model_name": "chatGLM",
+    "model_type": "GLM",   
+    "model_list":[
+        {
+            "model":"glm-4-plus",
+            "use":true
+        },{
+            "model":"glm-4-0520",
+            "use":true
+        },{
+            "model":"glm-4-air",
+            "use":true
+        },{
+            "model":"glm-4-airx",
+            "use":true
+        },{
+            "model":"glm-4-long",
+            "use":true
+        },{
+            "model":"glm-4-flashx",
+            "use":true
+        },{
+            "model":"glm-4-flash",
+            "use":true
+        }
+    ]},{
+    "model_name": "chatGPT",
+    "model_type": "GPT",
+    "model_list":[
+        {
+            "model":"gpt-4-turbo",
+            "use":true
+        },{
+            "model":"gpt-3.5-turbo",
+            "use":true
+        },{
+            "model":"gpt-4o-mini",
+            "use":true
+        },{
+            "model":"chatgpt-4o-latest",
+            "use":true
+        },{
+            "model":"gpt-4",
+            "use":true
+        }
+    ]},{
+    "model_name": "YiLarge",
+    "model_type": "YiLarge",
+    "model_list":[
+        {
+            "model":"yi-lightning",
+            "use":true
+        },{
+            "model":"yi-large",
+            "use":true
+        },{
+            "model":"yi-medium",
+            "use":true
+        },{
+            "model":"yi-medium-200k",
+            "use":true
+        },{
+            "model":"yi-spark",
+            "use":true
+        },{
+            "model":"yi-large-turbo",
+            "use":true
+        }
+    ]},{
+    "model_name": "MoonShot",
+    "model_type": "MoonShot",
+    "model_list":[
+        {
+            "model":"moonshot-v1-8k",
+            "use":true
+        },{
+            "model":"moonshot-v1-32k",
+            "use":true
+        },{
+            "model":"moonshot-v1-128k",
+            "use":true
+        }
+    ]}
+
+]

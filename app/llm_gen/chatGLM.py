@@ -7,6 +7,7 @@ api_key = os.environ.get('ZHIPUAI_API_KEY')
 client = ZhipuAI(api_key=api_key)  # 填写您自己的APIKey
 
 def get_zhipu_respnse(message,model):
+    
     response = client.chat.completions.create(
         model=model,  # 填写需要调用的模型名称
         messages=[
@@ -17,4 +18,4 @@ def get_zhipu_respnse(message,model):
         )
     return response.choices[0].message.content
 if __name__ == '__main__':
-    print(get_zhipu_respnse(model="glm-4-Flash",message="你好"))
+    print(get_zhipu_respnse(model="charglm-3",message="你好"))

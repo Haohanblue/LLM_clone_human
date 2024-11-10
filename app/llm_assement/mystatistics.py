@@ -126,7 +126,7 @@ plt.figure(figsize=(10, 8))
 bars = average_accuracies.plot(kind='bar')
 plt.ylabel('平均正确率')
 plt.title('各模型平均正确率比较')
-plt.ylim(0.5, 0.7)  # 缩小纵轴范围
+plt.ylim(0.5, 0.75)  # 缩小纵轴范围
 plt.xticks(rotation=45)
 
 # 为每个柱添加准确率标签

@@ -3,7 +3,8 @@ import os
 import logging
 from chatGLM import get_zhipu_respnse
 from chatGPT import get_GPT_response
-
+from chatYiLarge import get_YiLarge_response
+from chatMoonShot import get_MoonShot_response
 # 获取当前文件的目录
 pwd = os.path.dirname(os.path.abspath(__file__))
 
@@ -37,11 +38,17 @@ if os.path.exists(progress_file):
         completed_files = json.load(f)
 else:
     completed_files = {}
+# 加载模型列表
+model_list_file = f'{pwd}/modelList.json'
+with open(model_list_file, 'r', encoding='utf-8') as f:
+    model_list = json.load(f)
+
+
 
 # 定义文件夹路径
 source_data_dir = f'{pwd}/../source_handle/handle_data/289539715_按序号_【24-FAL】(DAY1) 中国大五人格问卷简版（CBF-PI-B）[复制]_5_5'
 llm_result_dir = f'{pwd}/llm_result'
-models = ['glm-4-Flash','gpt-3.5-turbo', 'gpt-4o-mini', 'chatgpt-4o-latest', 'gpt-4-turbo']
+models = ['charglm-3','glm-4-Flash','glm-4-plus','glm-4-0520','glm-4-long','glm-4-air','glm-4-airx','glm-4-flashx','glm-4-long','gpt-3.5-turbo', 'gpt-4o-mini', 'chatgpt-4o-latest', 'gpt-4-turbo']
 
 # 读取待回答的问卷问题
 handle_data = """下面的问题是判断题，是就回答1，否就回答2。只有这两个选择。 
@@ -76,67 +83,74 @@ for filename in os.listdir(source_data_dir):
                                                 1=完全不符合，2=大部分不符合，3=有点不符合，4=有点符合，5=大部分符合，6=完全符合。具体数据：{source_data_str}>---
 
                     接下来你要扮演这个人，回答这一份问卷，注意你要回答的问卷不是像刚刚那样的李克特量表题，而是正误判断题只能回答1或者2。---<指导语：在这份问卷上有1-48共48个问题。 请你依次回答这些问题，回答不需要写字，只在每个问题后面的“是”或“否”中选择一个。 这些问题要求你按自己的实际情况回答，不要去猜测怎样才是正确的回答。因为这里不存在正确或错误的回答，也没有捉弄人的问题，将问题的意思看懂了就快点回答，不要花很多时间去想。
-问卷无时间限制，但不要拖延太长，也不要未看懂问题便回答。{handle_data}>---
+                    问卷无时间限制，但不要拖延太长，也不要未看懂问题便回答。{handle_data}>---
 
                     输出结果格式要求：
                     只生成json结果，不需要生成其他内容。
                     如果回答的value有不是1或2的，请重新回答，只能是1或2。如果回答的value有不是1或2的，请重新回答，只能是1或2。
                     请你阅读这份问卷的问题，根据问卷要求，结合你要扮演的角色的特征来进行回答，回答的内容要符合这个人的特点，性格，爱好，习惯，行为等等，不要回答自己的看法。您要回答的问卷是二分类的问题，1代表是，2代表否。请将value要么为1，要么为2. 
-                    输出格式为一个json列表，每一个元素为一个字典，字典中包含三个键值对，分别为id，description，value，其中id为题号，description为题目描述，value为回答内容。
+                    输出格式为一个json列表，每一个元素为一个字典，字典中包含两个键值对，分别为id和value，其中id为题号这个题号顺序对应我问你的handle_data中的顺序,value为回答内容,不要生成1和2之外的内容，不要生成任何注释和解释。
                                         """
         
-        for model_name in models:
-            if filename in completed_files and model_name in completed_files[filename]:
-                logging.info(f"文件 {filename} 已通过模型 {model_name} 处理，跳过...")
-                print(f"文件 {filename} 已通过模型 {model_name} 处理，跳过...")
-                continue
-            
-            logging.info(f"正在处理文件：{filename}，模型：{model_name}...")
-            print(f"正在处理文件：{filename}，模型：{model_name}...")
-            model_dir = os.path.join(llm_result_dir, model_name)
-            os.makedirs(model_dir, exist_ok=True)
-            
-            try:
-                # 根据模型名称调用相应的函数
-                if model_name == 'glm-4-Flash':
-                    response = get_zhipu_respnse(template, model_name)
-                    print(f"针对{filename}样本，{model_name}生成的response为: {response}")
-                else:
-                    response = get_GPT_response(template, model_name)
-                    print(f"针对{filename}样本，{model_name}生成的response为: {response}")
-                
-                # 提取 JSON 数据
-                try:
-                    response_json = json.loads(response)
+        # 遍历模型列表
+        for model_info in model_list:
+            model_type = model_info['model_type']
+            print(f"model_type: {model_type}")
+            for model in model_info['model_list']:
+                if model['use']:
+                    model_name = model['model']
+                    if filename in completed_files and model_name in completed_files[filename]:
+                        logging.info(f"文件 {filename} 已通过模型 {model_name} 处理，跳过...")
+                        print(f"文件 {filename} 已通过模型 {model_name} 处理，跳过...")
+                        continue
                     
-                except json.JSONDecodeError:
-                    response_json = extract_json_from_response(response)
-                
-                # 保存生成结果
-                output_filename = 'llm_' + filename
-                output_file_path = os.path.join(model_dir, output_filename)
+                    logging.info(f"正在处理文件：{filename}，模型：{model_name}...")
+                    print(f"正在处理文件：{filename}，模型：{model_name}...")
+                    model_dir = os.path.join(llm_result_dir, model_name)
+                    os.makedirs(model_dir, exist_ok=True)
+                    
+                    try:
+                        # 根据模型类型调用相应的函数
+                        if model_type == "GLM":
+                            response = get_zhipu_respnse(template, model_name)
+                        elif model_type == "GPT":
+                            response = get_GPT_response(template, model_name)
 
-                
-                with open(output_file_path, 'w', encoding='utf-8') as f_out:
-                    json.dump(response_json, f_out, ensure_ascii=False, indent=4)
+                        # You can add other model_type cases here
+                        elif model_type == "YiLarge":
+                            response = get_YiLarge_response(template, model_name)
+                        elif model_type == "MoonShot":
+                            response = get_MoonShot_response(template, model_name)
+                        print(f'针对{filename},{model_name}的GLM response: {response}')
+                        # 提取 JSON 数据
+                        try:
+                            response_json = json.loads(response)
+                        except json.JSONDecodeError:
+                            response_json = extract_json_from_response(response)
+                        
+                        # 保存生成结果
+                        output_filename = 'llm_' + filename
+                        output_file_path = os.path.join(model_dir, output_filename)
+                        
+                        with open(output_file_path, 'w', encoding='utf-8') as f_out:
+                            json.dump(response_json, f_out, ensure_ascii=False, indent=4)
 
-                # 更新进度
-                if filename not in completed_files:
-                    completed_files[filename] = []
-                completed_files[filename].append(model_name)
+                        # 更新进度
+                        if filename not in completed_files:
+                            completed_files[filename] = []
+                        completed_files[filename].append(model_name)
 
-                # 将进度保存到文件中
-                with open(progress_file, 'w', encoding='utf-8') as f:
-                    json.dump(completed_files, f, ensure_ascii=False, indent=4)
-                
-                logging.info(f"文件 {filename} 使用模型 {model_name} 处理完成。")
-                print(f"文件 {filename} 使用模型 {model_name} 处理完成。")
-            except Exception as e:
-                logging.error(f"处理文件 {filename} 时，模型 {model_name} 出现错误: {e}")
-                print(f"处理文件 {filename} 时，模型 {model_name} 出现错误: {e}")
+                        # 保存进度到文件
+                        with open(progress_file, 'w', encoding='utf-8') as f:
+                            json.dump(completed_files, f, ensure_ascii=False, indent=4)
+
+                        logging.info(f"文件 {filename} 使用模型 {model_name} 处理完成。")
+                        print(f"文件 {filename} 使用模型 {model_name} 处理完成。")
+                    except Exception as e:
+                        logging.error(f"处理文件 {filename} 时，模型 {model_name} 出现错误: {e}")
+                        print(f"处理文件 {filename} 时，模型 {model_name} 出现错误: {e}")
 
 logging.info("处理完成。")
-print("处理完成。")
 
 
 
